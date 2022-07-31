@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+Dine Booking
+</title>
+<script>
+function validate(){  
+ var n=document.getElementById('name').value.length;
+     if(n<=20){
+        return true;
+}
+else{
+    window.alert("Visitor Name cant exceed 20 characters");
+    return false;
+}
+var c=document.getElementById('numb').value.length;
+     if(c==2){
+        return true;
+}
+else{
+    window.alert("Number of members cant exceed 2 digit number");
+    return false;
+}
+}  
+</script>
+</head>
+<body>
+<center>
+<fieldset>
+<form>
+Dine Booking<br><br><br>
+Visitor Name:
+<input type="text" id="name" required autofocus><br>
+Number of Members:
+<input type="text" id="numb" maxlength="2" required>
+<br>
+Contact No:
+<input type="tel" id="con" required><br>
+Email:
+<input type="email" id="mail" required><br>
+Type of Food:
+<input type="checkbox" id="si" name="food" checked>South Indian
+<input type="checkbox" id="ni" name="food1">North Indian
+<input type="checkbox" id="c" name="food2">Chineese
+<input type="checkbox" id="w" name="food3">Western
+<br>Room Status:
+<input type="radio" id="ac" name="status" checked>AC
+<input type="radio" id="nac" name="status">Non-AC
+<br>
+Venue Preference:
+<select name="venue" id="venue">
+ <option value="--SELECT--">--SELECT--</option>
+  <option value="Arena">Arena</option>
+  <option value="Fiesta">Fiesta</option>
+  <option value="Vista">Vista</option>
+  <option value="Mythri">Mythri</option>
+ <option value="Magna">Magna</option>
+  <option value="Oasis">Oasis</option>
+<option value="Amoeba" disabled>Amoeba</option>
+</select><br><br><br>
+<input type="submit" value="Book" onclick='return validate()'>
+<input type="reset" value="Reset">
+</form>
+</fieldset>
+</center>
+</body>
+</html>
+
